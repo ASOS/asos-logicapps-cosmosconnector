@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Company>asos</Company>
+    <Product>Cosmos Extension</Product>
+    <PackageId>Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension</Title>
+    <Authors>ASOS Integration Engineers</Authors>
+    <RootNamespace>Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension</RootNamespace>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.18.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.0.1.4-preview" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" Condition="'$(Configuration)' == 'Debug'" />    
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+     <SignAssembly>true</SignAssembly>
+     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+     <PublicSign>true</PublicSign>     
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Asos.Azure.Workflows.ServiceProviders.Cosmos\Asos.Azure.Workflows.ServiceProviders.Cosmos.csproj" PrivateAssets="all" />
+  </ItemGroup>
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+    </ItemGroup>
+  </Target>
+</Project>
+

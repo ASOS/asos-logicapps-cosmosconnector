@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asos.Azure.Workflows.ServiceProviders.Cosmos", "Asos.Azure.Workflows.ServiceProviders.Cosmos\Asos.Azure.Workflows.ServiceProviders.Cosmos.csproj", "{E4FAE944-B804-422A-BBDA-10C13711573E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.UnitTests", "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.UnitTests\Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.UnitTests.csproj", "{E56D9D25-623F-41A6-B8FC-B299818BE1FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.IntegrationTests", "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.IntegrationTests\Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.IntegrationTests.csproj", "{B799DA15-1FAF-47D0-B67A-DEFD11099A1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7CB7152A-AB0E-44AE-BB7E-46C1DA152A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension", "Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension\Asos.Azure.Workflows.ServiceProviders.Cosmos.Extension.csproj", "{A3D80FC8-FC63-44C2-8231-4855E6DE3BB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4FAE944-B804-422A-BBDA-10C13711573E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4FAE944-B804-422A-BBDA-10C13711573E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4FAE944-B804-422A-BBDA-10C13711573E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4FAE944-B804-422A-BBDA-10C13711573E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56D9D25-623F-41A6-B8FC-B299818BE1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56D9D25-623F-41A6-B8FC-B299818BE1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56D9D25-623F-41A6-B8FC-B299818BE1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56D9D25-623F-41A6-B8FC-B299818BE1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B799DA15-1FAF-47D0-B67A-DEFD11099A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B799DA15-1FAF-47D0-B67A-DEFD11099A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B799DA15-1FAF-47D0-B67A-DEFD11099A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B799DA15-1FAF-47D0-B67A-DEFD11099A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D80FC8-FC63-44C2-8231-4855E6DE3BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D80FC8-FC63-44C2-8231-4855E6DE3BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D80FC8-FC63-44C2-8231-4855E6DE3BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D80FC8-FC63-44C2-8231-4855E6DE3BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E701B01D-BFBC-41EE-8206-40B975D7ADD8}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B799DA15-1FAF-47D0-B67A-DEFD11099A1A} = {7CB7152A-AB0E-44AE-BB7E-46C1DA152A87}
+		{E56D9D25-623F-41A6-B8FC-B299818BE1FA} = {7CB7152A-AB0E-44AE-BB7E-46C1DA152A87}
+	EndGlobalSection
+EndGlobal

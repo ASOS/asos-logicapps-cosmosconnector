@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Company>asos</Company>
+    <Product>Cosmos Extension Functionality</Product>
+    <PackageId>Asos.Azure.Workflows.ServiceProviders.Cosmos</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>Asos.Azure.Workflows.ServiceProviders.Cosmos</Title>
+    <Authors>ASOS Integration Engineers</Authors>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.18.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.0.1.4-preview" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" Condition="'$(Configuration)' == 'Debug'" />    
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+     <SignAssembly>true</SignAssembly>
+     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+     <PublicSign>true</PublicSign>     
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
+
